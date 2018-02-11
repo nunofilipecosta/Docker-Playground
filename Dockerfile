@@ -1,16 +1,7 @@
-FROM ubuntu
+FROM ubuntu:16.04
 
-RUN apt-get update && \
-    apt-get install -y netcat-openbsd
+RUN apt-get update
 
-ENV LOG_FILE=echo.out
+RUN mkdir /v1 && touch /v1/file1.es.txt
 
-COPY ./echoserver.sh /echoserver.sh
-
-RUN chmod +x /echoserver.sh
-
-EXPOSE 8082
-
-VOLUME [ "/server-logs" ]
-
-CMD [ "/echoserver.sh" ]
+VOLUME [ "/v1" ]
