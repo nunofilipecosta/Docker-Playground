@@ -11,3 +11,5 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Str0ngPa$$w0rd' -p 1433:1433 -d mc
 ```
 
 ## Connect to database usign Azure Data Studio or other
+
+https://stackoverflow.com/questions/19085610/seeding-mysql-data-in-a-docker-build
